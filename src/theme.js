@@ -1,46 +1,43 @@
 import { createTheme } from "@mui/material/styles";
 
-export const theme = createTheme({
+const theme = createTheme({
   palette: {
-    // Calm, complementary primary and secondary colors with good accessibility
     primary: {
-      main: "#4A90A4", // Soft muted blue - calm and professional
+      main: "#4A90A4",
       light: "#6BA3B5",
       dark: "#2D5A70",
       contrastText: "#ffffff",
     },
     secondary: {
-      main: "#6BA490", // Soft muted teal - complements primary, calming
+      main: "#6BA490",
       light: "#8DBAA8",
       dark: "#4A7A6B",
       contrastText: "#ffffff",
     },
-    // State colors with good accessibility
     success: {
-      main: "#2E7D32", // WCAG AA compliant green
+      main: "#2E7D32",
       light: "#4CAF50",
       dark: "#1B5E20",
       contrastText: "#ffffff",
     },
     error: {
-      main: "#C62828", // WCAG AA compliant red
+      main: "#C62828",
       light: "#E53935",
       dark: "#B71C1C",
       contrastText: "#ffffff",
     },
     warning: {
-      main: "#F57C00", // WCAG AA compliant orange
+      main: "#F57C00",
       light: "#FB8C00",
       dark: "#E65100",
       contrastText: "#ffffff",
     },
     info: {
-      main: "#4A90A4", // Uses primary blue for consistency
+      main: "#4A90A4",
       light: "#6BA3B5",
       dark: "#2D5A70",
       contrastText: "#ffffff",
     },
-    // Neutral colors - comprehensive gray scale
     grey: {
       50: "#FAFAFA",
       100: "#F5F5F5",
@@ -58,11 +55,11 @@ export const theme = createTheme({
       paper: "#FFFFFF",
     },
     text: {
-      primary: "#212121", // Dark gray for readability
-      secondary: "#616161", // Mid gray for secondary text
-      disabled: "#BDBDBD", // Light gray for disabled state
+      primary: "#212121",
+      secondary: "#616161",
+      disabled: "#BDBDBD",
     },
-    divider: "#E0E0E0", // Use a neutral gray for dividers
+    divider: "#E0E0E0",
   },
   typography: {
     fontFamily: [
@@ -74,7 +71,6 @@ export const theme = createTheme({
       "Arial",
       "sans-serif",
     ].join(","),
-    // Mobile-first typography (base for small screens)
     h1: {
       fontSize: "1.75rem",
       fontWeight: 700,
@@ -125,17 +121,15 @@ export const theme = createTheme({
     },
   },
   shape: {
-    borderRadius: 0.5, // 8px in rem (0.5rem)
+    borderRadius: 0.5,
   },
-  spacing: 8, // Base spacing unit (8px)
+  spacing: 8,
   breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 960,
-      lg: 1264,
-      xl: 1920,
-    },
+    xs: 0,
+    sm: 600,
+    md: 960,
+    lg: 1264,
+    xl: 1920,
   },
   components: {
     MuiButton: {
@@ -143,7 +137,6 @@ export const theme = createTheme({
         root: {
           textTransform: "none",
           fontWeight: 600,
-          // Mobile-first: touch-friendly sizes (44px = 2.75rem)
           minHeight: "2.75rem",
           minWidth: "2.75rem",
           "@media (min-width:960px)": {
@@ -156,7 +149,6 @@ export const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          // Mobile-first: reduced margins
           margin: "0.5rem",
           "@media (min-width:600px)": {
             margin: "1rem",
@@ -170,3 +162,4 @@ export const theme = createTheme({
   },
 });
 
+export default theme;
